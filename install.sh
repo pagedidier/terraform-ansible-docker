@@ -1,11 +1,13 @@
 #!/bin/bash
-sudo apt update
-sudo apt install software-properties-common
-sudo apt-add-repository --yes --update ppa:ansible/ansible
-sudo apt install ansible
+apt update
+apt install git
+apt install software-properties-common -y
+apt-add-repository --yes --update ppa:ansible/ansible
+apt install ansible wget unzip -y
 
 
 wget https://releases.hashicorp.com/terraform/0.12.24/terraform_0.12.24_linux_386.zip
 
 unzip terraform_0.12.24_linux_386.zip
-sudo mv terraform /usr/local/bin/
+mv terraform /usr/local/bin/
+rm terraform_0.12.24_linux_386.zip
